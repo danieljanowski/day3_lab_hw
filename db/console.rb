@@ -11,6 +11,9 @@ artist1.save
 artist2 = Artist.new({'name' => 'Lady Gaga'})
 artist2.save
 
+artist3 = Artist.new({'name' => 'Queen'})
+artist3.save
+
 album1 = Album.new({'title' => 'The Last Ship', 'genre' => 'Rock', 'artist_id' => artist1.id})
 
 album1.save
@@ -22,7 +25,11 @@ album3 = Album.new({'title' => 'Brand New Day', 'genre' => 'Rock', 'artist_id' =
 album3.save
 
 artist2.name = 'Madonna'
-# artist2.update
+artist2.update
+
+album3.genre = 'pop'
+album3.update
+
 
 binding.pry
 

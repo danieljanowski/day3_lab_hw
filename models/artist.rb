@@ -10,7 +10,6 @@ class Artist
   def initialize (options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-
   end
 
   def save
@@ -22,14 +21,12 @@ class Artist
     values = [@name]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
-
   end
 
   def update
     sql = "UPDATE artists SET name = $1 WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
-
   end
 
   def delete
@@ -48,7 +45,6 @@ class Artist
   def self.delete_all
     sql = "DELETE FROM artists"
     SqlRunner.run(sql)
-
   end
 
   def self.all
@@ -64,6 +60,5 @@ class Artist
     artist_hash = results.first
     return Artist.new(artist_hash)
   end
-
-
+  
 end

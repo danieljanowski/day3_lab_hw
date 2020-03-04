@@ -72,5 +72,5 @@ class Album
     album_hash = results.first
     return Album.new(album_hash)
   end
-
+  
 end

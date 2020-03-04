@@ -21,6 +21,9 @@ album2.save
 album3 = Album.new({'title' => 'Brand New Day', 'genre' => 'Rock', 'artist_id' => artist1.id})
 album3.save
 
+artist2.name = 'Madonna'
+# artist2.update
+
 binding.pry
 
 nil

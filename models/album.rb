@@ -36,6 +36,11 @@ class Album
 
   end
 
+  def update
+    sql = "UPDATE albums"
+
+  end
+
   def self.delete_all
     sql = "DELETE FROM albums"
     SqlRunner.run(sql)
